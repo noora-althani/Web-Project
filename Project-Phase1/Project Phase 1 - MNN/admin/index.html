@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/nav.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav id="logo">
+        <a href="#">
+          <img src="../images/logo.png" alt="" />
+        </a>
+      </nav>
+      <nav id="top-nav">
+        <a href="../index.html">
+          <span>Home</span>
+        </a>
+      </nav>
+      <nav>
+        <div id="user_profile">
+          <a href="../login.html"> Login </a>
+        </div>
+      </nav>
+    </header>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <!--All Admin Fucntionaly is done in this page-->
+    <h1>Admin Page</h1>
+
+    <script>
+      let logBtn = document.getElementById("");
+      function checkLogStatus() {
+        let user_data = localStorage.getItem("userinfo");
+        console.log(user_data);
+        if (user_data != null) {
+          let ele = document.getElementById("user_profile");
+          user_data = JSON.parse(localStorage.getItem("userinfo"));
+          ele.innerHTML = `
+  
+          <a href="#">Welcome, ${user_data[0]["username"]}</a>
+  
+          <button onclick="logoutUser('../index.html')">Logout</button>
+          `;
+        }
+        if (user_data[0]["role"] == "Admin") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="index.html">
+            <span>Admin Controls</span>
+          </a>
+          
+          `;
+        } else {
+          console.log("error page");
+        }
+      }
+
+      checkLogStatus();
+    </script>
+    <script>
+      function logoutUser(url = "") {
+        localStorage.removeItem("userinfo");
+        if (url == "") {
+          window.location.href = "index.html";
+        } else {
+          window.location.href = url;
+        }
+      }
+    </script>
+  </body>
+</html>

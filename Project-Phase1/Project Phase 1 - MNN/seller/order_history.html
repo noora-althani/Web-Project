@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Item</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="../styles/coustomer_orders.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav id="logo">
+        <a href="#">
+          <img src="images/logo.png" alt="" />
+        </a>
+      </nav>
+      <nav id="top-nav">
+        <a href="index.html">
+          <span>Home</span>
+        </a>
+      </nav>
+      <nav>
+        <div id="user_profile">
+          <a href="login.html"> Login </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 id="pageheading"></h1>
+        <table id="order_data">
+          <tr>
+            <th>Order No</th>
+            <th>Model Name</th>
+            <th>Make</th>
+            <th>Unite Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>User Id</th>
+
+          </tr>
+        </table>
+      </section>
+    </main>
+    <script>
+      function loadOrders() {
+        let orderHistory = localStorage.getItem("orderHistory");
+        let userinfo = JSON.parse(localStorage.getItem("userinfo"));
+        console.log(userinfo);
+        if (orderHistory != null) {
+          orderHistory = JSON.parse(localStorage.getItem("orderHistory"));
+
+          showOrders(orderHistory);
+        } else {
+          console.log("this user dosnt have any orders");
+        }
+      }
+      loadOrders();
+      function showOrders(userOrders) {
+        let ele = document.getElementById("order_data");
+
+        userOrders.forEach((user_order) => {
+          let car_data = getCarData(user_order["car_id"]);
+          console.log(car_data);
+
+          ele.innerHTML += `
+          <tr>
+            <td>${user_order["order_id"]}</td>
+            <td>${car_data["model"]}</td>
+            <td>${car_data["make"]}</td>
+            <td>${car_data["price"]}</td>
+            <td>${user_order["quantity"]}</td>
+            <td>$${user_order["total_cost"]}</td>
+            <td>${user_order["user_id"]}</td>
+
+          </tr>
+        `;
+        });
+
+        /*
+                    <th>Order No</th>
+            <th>Model Name</th>
+            <th>Make</th>
+            <th>Unite Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+        */
+      }
+
+      function getCarData(car_id) {
+        let car_list = JSON.parse(localStorage.getItem("cars_store"));
+        let car_data = car_list.filter((car) => car["id"] == car_id);
+        return car_data[0];
+      }
+    </script>
+
+    <script>
+      function checkLogStatus() {
+        let user_data = localStorage.getItem("userinfo");
+        //console.log(user_data);
+        if (user_data != null) {
+          let ele = document.getElementById("user_profile");
+          user_data = JSON.parse(localStorage.getItem("userinfo"));
+          ele.innerHTML = `
+
+          <a href="#">Welcome, ${user_data[0]["username"]}</a>
+
+          <button onclick="logoutUser()">Logout</button>
+          `;
+        }
+        if (user_data[0]["role"] == "Customer") {
+          let pghEle = document.getElementById("pageheading");
+          pghEle.innerText += `
+          ${user_data[0]["username"]}, Order History
+          `;
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="coustomer_orders.html">
+            <span>Order History</span>
+          </a>
+          
+          `;
+          return;
+        }
+
+        if (user_data[0]["role"] == "Seller") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="../index.html">
+            <span>Home</span>
+          </a>
+          <a href="index.html">
+            <span>Add New Car</span>
+          </a>
+          <a href="order_history.html">
+            <span>Order History</span>
+          </a>
+          
+          
+          `;
+          return;
+        }
+        if (user_data[0]["role"] == "Admin") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="admin/index.html">
+            <span>Admin Controls</span>
+          </a>
+          
+          `;
+          return;
+        }
+      }
+
+      checkLogStatus();
+    </script>
+    <script>
+      function logoutUser(url = "") {
+        localStorage.removeItem("userinfo");
+        if (url == "") {
+          let ele = document.getElementById("user_profile");
+          ele.innerHTML = `
+          <a href="login.html"> Login </a>
+
+          `;
+          window.location.href = "../index.html";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+[
+  {
+    "user_id": 1,
+    "role": "Customer",
+    "username": "user1",
+    "password": "user1",
+    "name": "Noora",
+    "surname": "Aziz",
+    "balance": 10000,
+    "shippingaddress": {
+      "counrty": "Qatar",
+      "city": "Doha",
+      "zone": 45,
+      "str name": 71
+    }
+  },
+  {
+    "user_id": 2,
+    "role": "Customer",
+    "username": "user2",
+    "password": "user2",
+    "name": "Noor",
+    "surname": "Nooh",
+    "balance": 30000,
+    "shippingaddress": {
+      "counrty": "ksa",
+      "city": "Maccah",
+      "zone": 21,
+      "str name": 110
+    }
+  },
+  {
+    "user_id": 3,
+    "role": "Customer",
+    "username": "user3",
+    "password": "user3",
+    "name": "Maryam",
+    "surname": "Khalid",
+    "balance": 20000,
+    "shippingaddress": {
+      "counrty": "Kuwait",
+      "city": "Kuwait",
+      "zone": 30,
+      "str name": 130
+    }
+  },
+  {
+    "user_id": 4,
+    "role": "Seller",
+    "username": "user4",
+    "password": "user4",
+    "name": "Ahamad",
+    "surname": "Aziz",
+    "balance": 1000,
+    "shippingaddress": {
+      "counrty": "Qatar",
+      "city": "Alsad",
+      "zone": 80,
+      "str name": 11
+    }
+  },
+  {
+    "user_id": 5,
+    "role": "Seller",
+    "username": "user5",
+    "password": "user5",
+    "name": "Nasser",
+    "surname": "Ahamad",
+    "balance": 290,
+    "shippingaddress": {
+      "counrty": "Qatar",
+      "city": "alkor",
+      "zone": 30,
+      "str name": 3
+    }
+  },
+  {
+    "user_id": 6,
+    "role": "Seller",
+    "username": "user6",
+    "password": "user6",
+    "name": "Jack",
+    "surname": "Jems",
+    "balance": 110000,
+    "shippingaddress": {
+      "counrty": "USA",
+      "city": "NYC",
+      "zone": 4,
+      "str name": 89
+    }
+  },
+  {
+    "user_id": 7,
+    "role": "Admin",
+    "username": "user7",
+    "password": "user7",
+    "name": "Mona",
+    "surname": "Ali",
+    "balance": 3345100,
+    "shippingaddress": {
+      "counrty": "Jordan",
+      "city": "Amman",
+      "zone": 7,
+      "str name": 781
+    }
+  },
+  {
+    "user_id": 8,
+    "role": "Admin",
+    "username": "user8",
+    "password": "user8",
+    "name": "Reem",
+    "surname": "Zayed",
+    "balance": 111000,
+    "shippingaddress": {
+      "counrty": "UAE",
+      "city": "Dubai",
+      "zone": 5,
+      "str name": 55
+    }
+  },
+  {
+    "user_id": 9,
+    "role": "Admin",
+    "username": "user9",
+    "password": "user9",
+    "name": "Sara",
+    "surname": "Salah",
+    "balance": 99910000,
+    "shippingaddress": {
+      "counrty": "Albahrain",
+      "city": "Manama",
+      "zone": 34,
+      "str name": 43
+    }
+  }
+]

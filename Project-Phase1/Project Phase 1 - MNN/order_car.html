@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Item</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/order_car.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav id="logo">
+        <a href="#">
+          <img src="images/logo.png" alt="" />
+        </a>
+      </nav>
+      <nav id="top-nav">
+        <a href="index.html">
+          <span>Home</span>
+        </a>
+      </nav>
+      <nav>
+        <div id="user_profile">
+          <a href="login.html"> Login </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+
+
+      <section id="section">
+        
+        <h1>Purchase Car</h1>
+
+
+        <form id="purchase-form" action="/path/to/submit" method="post">
+          <div class="form-group">
+            <label for="car_id">Car ID:</label>
+            <input type="text" id="car_id" readonly />
+          </div>
+          <div class="form-group">
+            <label for="model_name">Model Name:</label>
+            <input type="text" id="model_name" readonly />
+          </div>
+          <div class="form-group">
+            <label for="model_price">Model Price:</label>
+            <input type="text" id="model_price" readonly />
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="car_quantity"
+              name="quantity"
+              min="1"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="total-price">Total Price:</label>
+            <input type="text" id="total-price" name="total_price" readonly />
+          </div>
+          <div class="form-group">
+            <label for="shipping-address">Shipping Address:</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="country"
+              name="country"
+              placeholder="country"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="City"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="zone"
+              name="zone"
+              placeholder="Zone"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              id="shipping-address"
+              name="shipping_address"
+              placeholder="Street Address"
+              required
+            />
+          </div>
+
+          <button type="submit" id="buybtn" class="btn-submit">
+            Confirm Purchase
+          </button>
+        </form>
+      </section>
+    </main>
+    <script src="scripts/order_car.js"></script>
+    <script>
+      function checkLogStatus() {
+        let user_data = localStorage.getItem("userinfo");
+        //console.log(user_data);
+        if (user_data != null) {
+          let ele = document.getElementById("user_profile");
+          user_data = JSON.parse(localStorage.getItem("userinfo"));
+          ele.innerHTML = `
+
+          <a href="#">Welcome, ${user_data[0]["username"]}</a>
+
+          <button onclick="logoutUser()">Logout</button>
+          `;
+        }
+        if (user_data[0]["role"] == "Customer") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="coustomer_orders.html">
+            <span>Order History</span>
+          </a>
+          
+          `;
+          return;
+        }
+
+        if (user_data[0]["role"] == "Seller") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="seller/index.html">
+            <span>Seller Controls</span>
+          </a>
+          
+          `;
+          return;
+        }
+        if (user_data[0]["role"] == "Admin") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="admin/index.html">
+            <span>Admin Controls</span>
+          </a>
+          
+          `;
+          return;
+        }
+      }
+
+      checkLogStatus();
+    </script>
+    <script>
+      function logoutUser(url = "") {
+        localStorage.removeItem("userinfo");
+        if (url == "") {
+          let ele = document.getElementById("user_profile");
+          ele.innerHTML = `
+          <a href="login.html"> Login </a>
+
+          `;
+          window.location.href = "index.html";
+        }
+      }
+    </script>
+  </body>
+</html>

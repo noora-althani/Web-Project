@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/nav.css" />
+
+    <link rel="stylesheet" href="styles/seller_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav id="logo">
+        <a href="#">
+          <img src="../images/logo.png" alt="" />
+        </a>
+      </nav>
+      <nav id="top-nav">
+        <a href="../index.html">
+          <span>Home</span>
+        </a>
+      </nav>
+      <nav>
+        <div id="user_profile">
+          <a href="../login.html"> Login </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--All Seller Fucntionaly is done in this page-->
+    <h1>Seller Page</h1>
+    <h5 id="item_counter">Total Items:</h5>
+    <main class="main-section">
+      <div class="sell_container">
+        <h2>Sell a Car:</h2>
+
+        <form id="add_car_form">
+          <div class="grid-container">
+            <label for="price">Price:</label>
+            <input type="text" id="price" placeholder="Enter Price" required />
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              placeholder="Enter Quantity"
+              required
+            />
+            <label for="models">Model:</label
+            ><input
+              type="text"
+              id="model"
+              placeholder="Enter Vehicle Model"
+              required
+            />
+            <!-- <select name="model" id="models" class="models">
+              
+            </select> -->
+            <label for="makes">Make:</label>
+            <select name="make" id="makes" class="makes">
+              <!-- Inject makes here -->
+            </select>
+            <label for="year">Year:</label>
+            <input type="number" id="year" placeholder="Enter Year" required />
+            <label for="image">Image:</label>
+            <input
+              type="text"
+              id="image"
+              placeholder="Enter Image URL"
+              required
+            />
+            <input type="submit" value="Add Vehicle" id="add" />
+          </div>
+        </form>
+      </div>
+
+      <div class="show_history">
+        <h2>View Sale Items (History)</h2>
+
+        <div class="sale_item_container">
+          <h4>Nothing on Sale.</h4>
+          <!-- added items here ll= sellerIdList{car object} -->
+          <!-- display sellers list (list name by his id)-->
+        </div>
+      </div>
+    </main>
+    <script>
+
+      //
+      function checkLogStatus() {
+        let user_data = localStorage.getItem("userinfo");
+        //console.log(user_data);
+        if (user_data != null) {
+          let ele = document.getElementById("user_profile");
+          user_data = JSON.parse(localStorage.getItem("userinfo"));
+          ele.innerHTML = `
+    
+          <a href="#">Welcome, ${user_data[0]["username"]}</a>
+    
+          <button onclick="logoutUser()">Logout</button>
+          `;
+        }
+        if (user_data[0]["role"] == "Customer") {
+          let pghEle = document.getElementById("pageheading");
+          pghEle.innerText += `
+          ${user_data[0]["username"]}, Order History
+          `;
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="coustomer_orders.html">
+            <span>Order History</span>
+          </a>
+          
+          `;
+          return;
+        }
+
+        if (user_data[0]["role"] == "Seller") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="../index.html">
+            <span>Home</span>
+          </a>
+          <a href="index.html">
+            <span>Add New Car</span>
+          </a>
+          <a href="order_history.html">
+            <span>Order History</span>
+          </a>
+          
+          
+          `;
+          return;
+        }
+        if (user_data[0]["role"] == "Admin") {
+          let ele = document.getElementById("top-nav");
+          ele.innerHTML = `
+          <a href="index.html">
+            <span>Home</span>
+          </a>
+          <a href="admin/index.html">
+            <span>Admin Controls</span>
+          </a>
+          
+          `;
+          return;
+        }
+      }
+
+      checkLogStatus();
+    </script>
+    <script>
+      function logoutUser(url = "") {
+        localStorage.removeItem("userinfo");
+        if (url == "") {
+          let ele = document.getElementById("user_profile");
+          ele.innerHTML = `
+          <a href="login.html"> Login </a>
+          `;
+          window.location.href = "../index.html";
+        }
+      }
+    </script>
+  </body>
+  <script src="script.js" type="module"></script>
+</html>

@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "make": "Daewoo",
+    "model": "Nubira",
+    "year": 2000,
+    "price": "$37533.17",
+    "image": "https://www.edmunds.com/assets/m/daewoo/nubira/2000/oem/2000_daewoo_nubira_sedan_cdx_fq_oem_1_500.jpg",
+    "quantity": 10
+  },
+  {
+    "id": 2,
+    "make": "Dodge",
+    "model": "Nitro",
+    "year": 2008,
+    "price": "$62136.75",
+    "image": "https://i.ytimg.com/vi/Q21WjGwGkPQ/maxresdefault.jpg",
+    "quantity": 10
+  },
+  {
+    "id": 3,
+    "make": "BMW",
+    "model": "7 Series",
+    "year": 1999,
+    "price": "$81384.09",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/BMW_750i_E38_%287719664024%29.jpg/1200px-BMW_750i_E38_%287719664024%29.jpg",
+    "quantity": 10
+  },
+  {
+    "id": 4,
+    "make": "Subaru",
+    "model": "Leone",
+    "year": 1989,
+    "price": "$48194.07",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMdf01gP7FSfk32O856OGc9z5hOfntXwBKdSyJHnBYVg&s",
+    "quantity": 10
+  },
+  {
+    "id": 5,
+    "make": "Jeep",
+    "model": "Patriot",
+    "year": 2010,
+    "price": "$10470.09",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRnSs4nwerzdB_m3X8meSFHg0KBeOGtQxs-w&usqp=CAU",
+    "quantity": 10
+  },
+  {
+    "id": 6,
+    "make": "Honda",
+    "model": "Element",
+    "year": 2007,
+    "price": "$25285.50",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBzOz9ERJ3LPKzTiF6rZr-akj9sMqd5SLJRA&usqp=CAU",
+    "quantity": 10
+  },
+  {
+    "id": 7,
+    "make": "Dodge",
+    "model": "Grand Caravan",
+    "year": 1998,
+    "price": "$53437.27",
+    "image": "https://www.cars.com/i/large/in/v2/stock_photos/fdc2115d-dc52-493f-9cc5-cc4781340504/5b29bfe3-615c-42c0-9dd7-2bd9060d29a4.png",
+    "quantity": 10
+  },
+  {
+    "id": 8,
+    "make": "Chevrolet",
+    "model": "Cobalt",
+    "year": 2007,
+    "price": "$31555.94",
+    "image": "https://www.cars.com/i/large/in/v2/stock_photos/19c7559b-e2bf-4b45-9cb1-2449083db063/2ff0f7ca-311b-4a56-8799-78233b3c734d.png",
+    "quantity": 10
+  },
+  {
+    "id": 9,
+    "make": "Infiniti",
+    "model": "Q",
+    "year": 2005,
+    "price": "$68885.61",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROnk2JHNKtlPHiY4wEI-QI8FcfvIGgQgbfDxT0hqo1Ug&s",
+    "quantity": 10
+  },
+  {
+    "id": 10,
+    "make": "Volkswagen",
+    "model": "Cabriolet",
+    "year": 2000,
+    "price": "$70753.16",
+    "image": "https://cdn4.volusion.store/wahx3-tkt3o/v/vspfiles/photos/10-05-GOL95-35-2.jpg?v-cache=1681288204",
+    "quantity": 10
+  },
+  {
+    "id": 11,
+    "make": "Lexus",
+    "model": "ES",
+    "year": 2007,
+    "price": "$25505.73",
+    "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/06q3/267360/2007-lexus-es350-photo-5018-s-original.jpg",
+    "quantity": 10
+  },
+  {
+    "id": 12,
+    "make": "Dodge",
+    "model": "Neon",
+    "year": 1995,
+    "price": "$29826.22",
+    "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/media/364603/1995-dodge-neon-photo-364739-s-986x603.jpg",
+    "quantity": 10
+  },
+  {
+    "id": 13,
+    "make": "Mazda",
+    "model": "MX-3",
+    "year": 1993,
+    "price": "$68504.49",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/1992_Mazda_MX-3_ABS_1.8_Front.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 14,
+    "make": "Acura",
+    "model": "RL",
+    "year": 2011,
+    "price": "$48882.74",
+    "image": "https://hips.hearstapps.com/autoweek/assets/s3fs-public/110509921.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 15,
+    "make": "Pontiac",
+    "model": "Tempest",
+    "year": 1967,
+    "price": "$62314.87",
+    "image": "https://bringatrailer.com/wp-content/uploads/2023/03/IMG_2661-57693-scaled.jpeg?fit=940%2C631",
+    "quantity": 20
+  },
+  {
+    "id": 16,
+    "make": "Mercedes-Benz",
+    "model": "SLK-Class",
+    "year": 2012,
+    "price": "$89741.66",
+    "image": "https://www.cnet.com/a/img/resize/d7535fd345509e07239e3e5454a1a68a08607e79/hub/2011/11/03/ae09c41c-bb76-11e2-8a8e-0291187978f3/35054558_OVR.JPG?fit=crop&height=675&width=1200",
+    "quantity": 20
+  },
+  {
+    "id": 17,
+    "make": "Dodge",
+    "model": "Colt",
+    "year": 1989,
+    "price": "$97919.82",
+    "image": "https://i0.wp.com/www.curbsideclassic.com/wp-content/uploads/2020/01/1989-Dodge-Colt-Turbo.jpg?ssl=1",
+    "quantity": 20
+  },
+  {
+    "id": 18,
+    "make": "Ford",
+    "model": "F150",
+    "year": 2012,
+    "price": "$51135.04",
+    "image": "https://www.motortrend.com/uploads/sites/5/2012/08/2012-Ford-F-150-Lariat-4x4-EcoBoost-front-view.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 19,
+    "make": "Suzuki",
+    "model": "Forenza",
+    "year": 2005,
+    "price": "$10485.69",
+    "image": "https://media.ed.edmunds-media.com/suzuki/forenza/2004/oem/2004_suzuki_forenza_sedan_base_fq_oem_1_500.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 20,
+    "make": "Acura",
+    "model": "RL",
+    "year": 2007,
+    "price": "$24030.24",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXDh95k4SUh98OydkfKfHPu4qKZXcXVmELjwreZ7s-xw&s",
+    "quantity": 20
+  },
+  {
+    "id": 21,
+    "make": "Dodge",
+    "model": "Dakota Club",
+    "year": 1994,
+    "price": "$61539.58",
+    "image": "https://i.redd.it/hrfjgfw5rkz11.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 22,
+    "make": "Mercury",
+    "model": "Villager",
+    "year": 2002,
+    "price": "$77802.75",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/2002/2002-Mercury-Villager-FrontSide_MVVGWSPT024_505x375.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 23,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "year": 2008,
+    "price": "$67451.53",
+    "image": "https://www.vehiclehistory.com/uploads/2008-Mercedes-C-Class.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 24,
+    "make": "Lexus",
+    "model": "SC",
+    "year": 1998,
+    "price": "$63865.54",
+    "image": "https://mag.lexus.co.uk/wp-content/uploads/sites/3/2021/03/1998-Lexus-SC-400-696x416-1.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 25,
+    "make": "Ford",
+    "model": "Thunderbird",
+    "year": 1955,
+    "price": "$60636.46",
+    "image": "https://www.edmunds.com/assets/m/ford/thunderbird/1996/oem/1996_ford_thunderbird_coupe_lx_fq_oem_1_500.jpg",
+    "quantity": 20
+  },
+  {
+    "id": 26,
+    "make": "Volkswagen",
+    "model": "Golf",
+    "year": 2006,
+    "price": "$52614.18",
+    "image": "https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1562251210/autoexpress/images/car_photo_24798.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 27,
+    "make": "Lamborghini",
+    "model": "Diablo",
+    "year": 1998,
+    "price": "$50098.54",
+    "image": "https://i.ytimg.com/vi/yhFcEDLGe10/maxresdefault.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 28,
+    "make": "Lexus",
+    "model": "IS",
+    "year": 2010,
+    "price": "$25220.58",
+    "image": "https://cars.usnews.com/static/images/Auto/izmo/321520/2010_lexus_is_250_angularfront.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 29,
+    "make": "Toyota",
+    "model": "Camry Hybrid",
+    "year": 2010,
+    "price": "$49786.92",
+    "image": "https://media.ed.edmunds-media.com/toyota/camry-hybrid/2010/oem/2010_toyota_camry-hybrid_sedan_base_fq_oem_2_1600.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 30,
+    "make": "Lincoln",
+    "model": "Navigator",
+    "year": 1998,
+    "price": "$13448.58",
+    "image": "https://www.edmunds.com/assets/m/lincoln/navigator/1998/oem/1998_lincoln_navigator_4dr-suv_base_fq_oem_1_500.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 31,
+    "make": "Mercury",
+    "model": "Mountaineer",
+    "year": 2000,
+    "price": "$24089.89",
+    "image": "https://www.edmunds.com/assets/m/mercury/mountaineer/2000/oem/2000_mercury_mountaineer_4dr-suv_base_fq_oem_1_500.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 32,
+    "make": "Toyota",
+    "model": "Sienna",
+    "year": 2001,
+    "price": "$81116.78",
+    "image": "https://static.cargurus.com/images/forsale/2023/10/10/02/19/2000_toyota_sienna-pic-693994855663586249-1024x768.jpeg",
+    "quantity": 50
+  },
+  {
+    "id": 33,
+    "make": "Dodge",
+    "model": "Dakota Club",
+    "year": 1995,
+    "price": "$79871.84",
+    "image": "https://bringatrailer.com/wp-content/uploads/2023/06/1995_dodge_dakota_img_78181-52674.jpg?fit=940%2C626",
+    "quantity": 50
+  },
+  {
+    "id": 34,
+    "make": "Mazda",
+    "model": "MPV",
+    "year": 1995,
+    "price": "$24779.63",
+    "image": "https://media.ed.edmunds-media.com/mazda/mpv/1990/oem/1990_mazda_mpv_passenger-minivan_base_rq_oem_1_500.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 35,
+    "make": "Chevrolet",
+    "model": "Camaro",
+    "year": 1970,
+    "price": "$62340.67",
+    "image": "https://images.squarespace-cdn.com/content/v1/5e7918a4b1051f6e49dcfdb1/1634936893306-UU65HTHQH6H9CQW69SQB/DS102110FF.jpg",
+    "quantity": 50
+  },
+  {
+    "id": 36,
+    "make": "Porsche",
+    "model": "Boxster",
+    "year": 2006,
+    "price": "$39483.23",
+    "image": "https://static.cargurus.com/images/site/2008/03/17/06/15/2006_porsche_boxster-pic-29334-1600x1200.jpeg",
+    "quantity": 35
+  },
+  {
+    "id": 37,
+    "make": "Toyota",
+    "model": "4Runner",
+    "year": 1999,
+    "price": "$92895.15",
+    "image": "https://www.auto-data.net/images/f25/toyota-4runner-iii-facelift-1999.jpg",
+    "quantity": 35
+  },
+  {
+    "id": 38,
+    "make": "Kia",
+    "model": "Optima",
+    "year": 2006,
+    "price": "$55189.38",
+    "image": "https://www.motortrend.com/uploads/sites/10/2015/11/2006-kia-optima-ex-v6-sedan-angular-front.png",
+    "quantity": 35
+  },
+  {
+    "id": 39,
+    "make": "Dodge",
+    "model": "Caravan",
+    "year": 2011,
+    "price": "$42936.39",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR97ZcG94HlmM43wNuXo002ioLbOAiYj8tcxl6XB4oiVQ&s",
+    "quantity": 35
+  },
+  {
+    "id": 40,
+    "make": "Mitsubishi",
+    "model": "Galant",
+    "year": 1999,
+    "price": "$77246.08",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/1999/1999-Mitsubishi-Galant-FrontSide_MIGAL991_505x375.jpg",
+    "quantity": 35
+  },
+  {
+    "id": 41,
+    "make": "Toyota",
+    "model": "Prius v",
+    "year": 2012,
+    "price": "$84950.95",
+    "image": "https://www.iihs.org/cdn-cgi/image/width=636/api/ratings/model-year-images/2327/",
+    "quantity": 35
+  },
+  {
+    "id": 42,
+    "make": "Lincoln",
+    "model": "MKZ",
+    "year": 2011,
+    "price": "$25305.77",
+    "image": "https://cdn.jdpower.com/Models/400x200/2011-Lincoln-MKZ-Base.jpg",
+    "quantity": 35
+  },
+  {
+    "id": 43,
+    "make": "Pontiac",
+    "model": "Torrent",
+    "year": 2009,
+    "price": "$57653.89",
+    "image": "https://cars.usnews.com/static/images/Auto/izmo/300858/2009_pontiac_torrent_angularfront.jpg",
+    "quantity": 35
+  },
+  {
+    "id": 44,
+    "make": "Lexus",
+    "model": "IS F",
+    "year": 2008,
+    "price": "$50670.33",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/2008/2008-Lexus-IS%20F-FrontSide_LEISF081_505x375.jpg",
+    "quantity": 35
+  },
+  {
+    "id": 45,
+    "make": "Dodge",
+    "model": "Ram 1500",
+    "year": 1994,
+    "price": "$38295.43",
+    "image": "https://www.drivingline.com/s3/drivingline.prd/cropped/97125/basic_images_dodge_ram_1994_4.jpg",
+    "quantity": 42
+  },
+  {
+    "id": 46,
+    "make": "Mercedes-Benz",
+    "model": "M-Class",
+    "year": 2007,
+    "price": "$68137.41",
+    "image": "https://www.edmunds.com/assets/m/mercedes-benz/m-class/2007/oem/2007_mercedes-benz_m-class_4dr-suv_ml350_fq_oem_1_500.jpg",
+    "quantity": 42
+  },
+  {
+    "id": 47,
+    "make": "Buick",
+    "model": "Skylark",
+    "year": 1996,
+    "price": "$27193.23",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/1996_Buick_Skylark_Limited_Sedan%2C_front_left%2C_01-01-2023.jpg",
+    "quantity": 42
+  },
+  {
+    "id": 48,
+    "make": "Ford",
+    "model": "F-Series",
+    "year": 1997,
+    "price": "$53764.47",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/1997/1997-Ford-F150%20Regular%20Cab-FrontSide_FT15R972_505x372.jpg",
+    "quantity": 42
+  },
+  {
+    "id": 49,
+    "make": "Volvo",
+    "model": "V70",
+    "year": 2003,
+    "price": "$60271.09",
+    "image": "",
+    "quantity": 42
+  },
+  {
+    "id": 50,
+    "make": "Chevrolet",
+    "model": "Silverado",
+    "year": 1999,
+    "price": "$17896.38",
+    "image": "https://d1gymyavdvyjgt.cloudfront.net/drive/images/made/drive/images/remote/https_ssl.caranddriving.com/f2/images/used/big/volvov70_750_500_70.jpg",
+    "quantity": 42
+  },
+  {
+    "id": 51,
+    "make": "Volkswagen",
+    "model": "Eurovan",
+    "year": 2001,
+    "price": "$30029.98",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL1yN2NPTjRtT_z7kRD9OAGBT2byM6hJroW7Tmq2IPIw&s",
+    "quantity": 42
+  },
+  {
+    "id": 52,
+    "make": "Volvo",
+    "model": "S80",
+    "year": 2001,
+    "price": "$20849.43",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3JK47u4uFG_QNSYxJvwd4VAaAPT0ozE_A4XhxTqr9uQ&s",
+    "quantity": 42
+  },
+  {
+    "id": 53,
+    "make": "GMC",
+    "model": "Sonoma",
+    "year": 2000,
+    "price": "$95814.50",
+    "image": "https://www.cars.com/i/large/in/v2/stock_photos/fff0b71a-3b7f-4e82-bd0b-711acde88eb5/aa5c210a-f016-4b02-8a64-efd294f70b11.png",
+    "quantity": 42
+  },
+  {
+    "id": 54,
+    "make": "BMW",
+    "model": "7 Series",
+    "year": 2005,
+    "price": "$31796.40",
+    "image": "https://img.autoabc.lv/bmw-7-serija/bmw-7-serija_2005_Sedans_151027104731_3.jpg",
+    "quantity": 42
+  },
+  {
+    "id": 55,
+    "make": "Ford",
+    "model": "E-350 Super Duty Van",
+    "year": 2006,
+    "price": "$23400.24",
+    "image": "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/1d2b3d67-c7c2-4372-b753-5313d678a83f/d38ea742-a476-4e98-940d-a54084c32823.png",
+    "quantity": 8
+  },
+  {
+    "id": 56,
+    "make": "Ford",
+    "model": "Club Wagon",
+    "year": 1997,
+    "price": "$70142.11",
+    "image": "https://www.cars.com/i/large/in/v2/stock_photos/22883de2-311c-4141-b999-7503f3364ac4/e6d704d9-af3b-408c-b0a2-cdcb3d0ceebf.png",
+    "quantity": 8
+  },
+  {
+    "id": 57,
+    "make": "Ford",
+    "model": "Explorer",
+    "year": 2013,
+    "price": "$11929.64",
+    "image": "https://www.iihs.org/cdn-cgi/image/width=636/api/ratings/model-year-images/1685/",
+    "quantity": 8
+  },
+  {
+    "id": 58,
+    "make": "Toyota",
+    "model": "Avalon",
+    "year": 2009,
+    "price": "$79124.39",
+    "image": "https://images.hgmsites.net/lrg/toyota_100169997_l.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 59,
+    "make": "Lotus",
+    "model": "Esprit",
+    "year": 1995,
+    "price": "$85424.03",
+    "image": "https://bringatrailer.com/wp-content/uploads/2023/05/1995_lotus_esprit_img-1107-36339.jpg?fit=940%2C627",
+    "quantity": 8
+  },
+  {
+    "id": 60,
+    "make": "Chrysler",
+    "model": "Sebring",
+    "year": 1999,
+    "price": "$77687.90",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/1999_Chrysler_Sebring_LXi_%288017214320%29.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 61,
+    "make": "Toyota",
+    "model": "Camry Hybrid",
+    "year": 2009,
+    "price": "$76161.86",
+    "image": "https://platform.cstatic-images.com/medium/in/v2/stock_photos/c66c7db2-2258-4838-a372-beb60bd5c5b1/ee5c36e2-03f1-497c-a5cd-6361a7d1d07d.png",
+    "quantity": 8
+  },
+  {
+    "id": 62,
+    "make": "Hummer",
+    "model": "H3",
+    "year": 2009,
+    "price": "$88347.60",
+    "image": "https://www.edmunds.com/assets/m/hummer/h3/2008/oem/2008_hummer_h3_4dr-suv_alpha_fq_oem_1_500.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 63,
+    "make": "Chevrolet",
+    "model": "Silverado 1500",
+    "year": 2001,
+    "price": "$30076.68",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/2001/2001-Chevrolet-Silverado%201500%20Extended%20Cab-FrontSide_CTS1E018_505x375.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 64,
+    "make": "Lexus",
+    "model": "LX",
+    "year": 1996,
+    "price": "$14818.81",
+    "image": "https://s.car.info/image_files/full/lexus-lx-front-side-0-380004.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 65,
+    "make": "Volvo",
+    "model": "V70",
+    "year": 2003,
+    "price": "$95329.29",
+    "image": "https://www.edmunds.com/assets/m/volvo/v70/2001/oem/2001_volvo_v70_wagon_24m_fq_oem_1_500.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 66,
+    "make": "Suzuki",
+    "model": "Forenza",
+    "year": 2008,
+    "price": "$51488.57",
+    "image": "https://www.iihs.org/cdn-cgi/image/width=636/api/ratings/model-year-images/2039/",
+    "quantity": 8
+  },
+  {
+    "id": 67,
+    "make": "Dodge",
+    "model": "D150 Club",
+    "year": 1992,
+    "price": "$86863.34",
+    "image": "https://www.cars.com/i/large/in/v2/stock_photos/52c659c4-9215-426c-bbbe-96a5176e25b5/c6e029c4-a22d-4624-84a4-f098762771b4.png",
+    "quantity": 8
+  },
+  {
+    "id": 68,
+    "make": "GMC",
+    "model": "Savana 1500",
+    "year": 2006,
+    "price": "$75815.19",
+    "image": "https://www.edmunds.com/assets/m/gmc/savana-cargo/2006/oem/2006_gmc_savana-cargo_cargo-van_2500_fq_oem_1_500.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 69,
+    "make": "Ford",
+    "model": "Crown Victoria",
+    "year": 1992,
+    "price": "$71454.83",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMBqoD2mvWIhnNXFOiCxQL4Jp8-sPTBwILNlTgV8xuLA&s",
+    "quantity": 8
+  },
+  {
+    "id": 70,
+    "make": "Ford",
+    "model": "Edge",
+    "year": 2007,
+    "price": "$12633.06",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZFE9J3tzWRKySiKMqr63OSLJrdwsUr-Qz7RQXkmoEug&s",
+    "quantity": 8
+  },
+  {
+    "id": 71,
+    "make": "Ford",
+    "model": "F450",
+    "year": 2012,
+    "price": "$39021.06",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7YDmtDwhT36laU9FeSQ-scCA1VS3UPbqdfSIXkziATA&s",
+    "quantity": 8
+  },
+  {
+    "id": 72,
+    "make": "Buick",
+    "model": "Park Avenue",
+    "year": 1991,
+    "price": "$40743.24",
+    "image": "https://s.car.info/image_files/960/buick-park-avenue-back-side-bilutstallning-och-cruising-trollhattan-2022-1-1144382.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 73,
+    "make": "Saab",
+    "model": "9-5",
+    "year": 2006,
+    "price": "$27051.19",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/2006/2006-Saab-9-5-FrontSide_SA95SED061_505x375.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 74,
+    "make": "Isuzu",
+    "model": "Ascender",
+    "year": 2009,
+    "price": "$54606.68",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/2008/2008-Isuzu-Ascender-FrontSide_ITASC081_505x375.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 75,
+    "make": "Dodge",
+    "model": "Durango",
+    "year": 2011,
+    "price": "$27342.33",
+    "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/11q2/395918/2011-dodge-durango-r-t-hemi-road-test-review-car-and-driver-photo-396220-s-original.jpg",
+    "quantity": 8
+  },
+  {
+    "id": 76,
+    "make": "Dodge",
+    "model": "Viper",
+    "year": 1992,
+    "price": "$92316.16",
+    "image": "https://global.discourse-cdn.com/forza/original/4X/4/b/1/4b13239471708bfaddbe468dd4e65b41861dc221.jpeg",
+    "quantity": 8
+  },
+  {
+    "id": 77,
+    "make": "Buick",
+    "model": "Park Avenue",
+    "year": 1996,
+    "price": "$83895.98",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/1996/1996-Buick-Park%20Avenue-FrontSide_BUPRKULT962_506x335.jpg?interpolation=high-quality&downsize=303:*",
+    "quantity": 25
+  },
+  {
+    "id": 78,
+    "make": "Ford",
+    "model": "Econoline E150",
+    "year": 1994,
+    "price": "$93245.21",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/1994/1994-Ford-Econoline%20E150%20Cargo-Front_FTECO941_375x197.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 79,
+    "make": "Dodge",
+    "model": "Grand Caravan",
+    "year": 1999,
+    "price": "$60196.51",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/1999/1999-Dodge-Caravan%20Passenger-RearSide_DTCVNSE982_505x360.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 80,
+    "make": "Chevrolet",
+    "model": "Bel Air",
+    "year": 1967,
+    "price": "$83857.56",
+    "image": "https://cdn.dealeraccelerate.com/octane/1/169/26119/1920x1440/1967-chevrolet-bel-air",
+    "quantity": 25
+  },
+  {
+    "id": 81,
+    "make": "BMW",
+    "model": "X6",
+    "year": 2008,
+    "price": "$61957.91",
+    "image": "https://img.autoabc.lv/BMW-X6/BMW-X6_2008_Apvidus_151027105415_3.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 82,
+    "make": "Volkswagen",
+    "model": "Scirocco",
+    "year": 1986,
+    "price": "$20385.96",
+    "image": "https://bringatrailer.com/wp-content/uploads/2016/12/IMG_3233-1.jpg?fit=940%2C627",
+    "quantity": 25
+  },
+  {
+    "id": 83,
+    "make": "Ford",
+    "model": "Escort",
+    "year": 1992,
+    "price": "$44645.50",
+    "image": "https://hampson.blob.core.windows.net/stock/140-0-medium.jpg?v=63755956498983",
+    "quantity": 25
+  },
+  {
+    "id": 84,
+    "make": "Chevrolet",
+    "model": "Venture",
+    "year": 1997,
+    "price": "$78941.05",
+    "image": "https://www.edmunds.com/assets/m/chevrolet/venture/1997/oem/1997_chevrolet_venture_passenger-minivan_ls_fq_oem_1_500.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 85,
+    "make": "Chevrolet",
+    "model": "Monte Carlo",
+    "year": 1998,
+    "price": "$70029.56",
+    "image": "https://picolio.auto123.com/98photo/chevrolet/montecarlo2dr-ls.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 86,
+    "make": "Ford",
+    "model": "Bronco",
+    "year": 1986,
+    "price": "$54496.55",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_VScmSj0m9J7CbFFooKbfoCrNyI4ky_RuR8jby0iNzA&s",
+    "quantity": 25
+  },
+  {
+    "id": 87,
+    "make": "Jaguar",
+    "model": "XJ Series",
+    "year": 2003,
+    "price": "$51313.14",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/2003/2003-Jaguar-XJ-FrontSide_JAVP024_505x375.jpg?downsize=382:*",
+    "quantity": 25
+  },
+  {
+    "id": 88,
+    "make": "Subaru",
+    "model": "Alcyone SVX",
+    "year": 1994,
+    "price": "$96075.58",
+    "image": "https://www.edmunds.com/assets/m/subaru/svx/1992/oem/1992_subaru_svx_coupe_ls_fq_oem_1_500.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 89,
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2003,
+    "price": "$54978.31",
+    "image": "https://file.kelleybluebookimages.com/kbb/base/house/2003/2003-Honda-Civic-FrontSide_HOCIVEXSED031_505x375.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 90,
+    "make": "Dodge",
+    "model": "Viper",
+    "year": 1997,
+    "price": "$79013.66",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS6fzX7z3GGcSjKWkAZRpGR7em2CwsPXz71HElxZO3nw&s",
+    "quantity": 25
+  },
+  {
+    "id": 91,
+    "make": "BMW",
+    "model": "M",
+    "year": 2002,
+    "price": "$51662.20",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb6iM05ZjhLS6Q9MAwhEiqn0y4voDCvO4MtKSehWfZ0A&s",
+    "quantity": 25
+  },
+  {
+    "id": 92,
+    "make": "Suzuki",
+    "model": "Swift",
+    "year": 1994,
+    "price": "$57582.42",
+    "image": "https://www.edmunds.com/assets/m/suzuki/swift/1994/oem/1994_suzuki_swift_2dr-hatchback_ga_fq_oem_1_500.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 93,
+    "make": "Toyota",
+    "model": "Sequoia",
+    "year": 2007,
+    "price": "$97819.46",
+    "image": "https://cdn.jdpower.com/j/9890.jpg",
+    "quantity": 25
+  },
+  {
+    "id": 94,
+    "make": "Volkswagen",
+    "model": "Golf",
+    "year": 2012,
+    "price": "$20183.18",
+    "image": "https://www.cnet.com/a/img/resize/9a7532b0126949961c2f72f9bfe612b8e4af914f/hub/2012/11/12/18273f4c-bb76-11e2-8a8e-0291187978f3/35165474_OVR.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "quantity": 25
+  },
+  {
+    "id": 95,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "year": 2011,
+    "price": "$87365.18",
+    "image": "https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/cms/uploads/qAaolxlJRf2xKg4xCQrG",
+    "quantity": 25
+  },
+  {
+    "id": 96,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "year": 1995,
+    "price": "$38224.39",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiJTydceSHr-pyo-Mayi5ItGRKg7kiNd3Ahn6LRwKPgw&s",
+    "quantity": 25
+  },
+  {
+    "id": 97,
+    "make": "Audi",
+    "model": "5000CS",
+    "year": 1987,
+    "price": "$84738.78",
+    "image": "https://bringatrailer.com/wp-content/uploads/2020/05/1987_audi_5000cs_turbo_quattro_1600812167c5bca9fca7E98FA50B-35E2-4DCE-8461-2208510B75DE.jpeg?fit=940%2C626",
+    "quantity": 25
+  },
+  {
+    "id": 98,
+    "make": "Geo",
+    "model": "Prizm",
+    "year": 1994,
+    "price": "$62636.23",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx8pUmwytj-7RjL1cacLe-fCUurXocJe2WUauN3lphpg&s",
+    "quantity": 25
+  },
+  {
+    "id": 99,
+    "make": "Suzuki",
+    "model": "Forenza",
+    "year": 2008,
+    "price": "$86624.86",
+    "image": "https://www.iihs.org/cdn-cgi/image/width=636/api/ratings/model-year-images/2039/",
+    "quantity": 25
+  },
+  {
+    "id": 100,
+    "make": "Kia",
+    "model": "Optima",
+    "year": 2008,
+    "price": "$76472.06",
+    "image": "https://www.iihs.org/cdn-cgi/image/width=636/api/ratings/model-year-images/2034/",
+    "quantity": 25
+  }
+]

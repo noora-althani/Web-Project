@@ -1,0 +1,27 @@
+[
+  {
+    "customerID": 1,
+    "first_name": "Noor",
+    "last_name": "Khalifa"
+  },
+  {
+    "customerID": 2,
+    "first_name": "Noora",
+    "last_name": "Khalid"
+  },
+  {
+    "customerID": 3,
+    "first_name": "Ali",
+    "last_name": "Nasser"
+  },
+  {
+    "customerID": 4,
+    "first_name": "Haya",
+    "last_name": "Rashid"
+  },
+  {
+    "customerID": 5,
+    "first_name": "Noor",
+    "last_name": "Ahmad"
+  }
+]

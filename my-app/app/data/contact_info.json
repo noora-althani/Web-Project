@@ -1,0 +1,24 @@
+[
+    {
+      "contact_infoID":1,  
+      "mobile_num":11111111,
+      "email":"11A@gamil.com",
+      "customerIDFk":1
+
+    },
+    {
+        "contact_infoID":2,  
+        "mobile_num":11111111,
+        "email":"11A@gamil.com",
+        "customerIDFk":2
+  
+      },
+      {
+        "contact_infoID":3,  
+        "mobile_num":11111111,
+        "email":"11A@gamil.com",
+        "customerIDFk":3
+  
+      }
+    
+]

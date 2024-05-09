@@ -1,0 +1,24 @@
+[
+    {
+       "orderID":1,
+       "order_num":1,
+       "quantity":1,
+       "carIDFK":1,
+       "customerIDFK":1
+    },
+    {
+        "orderID":2,
+        "order_num":2,
+        "quantity":2,
+        "carIDFK":2,
+        "customerIDFK":2
+     }
+     ,
+     {
+        "orderID":3,
+        "order_num":3,
+        "quantity":3,
+        "carIDFK":3,
+        "customerIDFK":3
+     }
+]

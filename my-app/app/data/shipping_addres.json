@@ -1,0 +1,32 @@
+[
+    {
+       "addresID":1, 
+       "zone":71,
+       "str":971,
+       "country":"Qatar",
+       "house_num":104,
+       "city":"Umm Salal Ali",
+       "customerIDFK":1
+
+    },
+    {
+        "addresID":2, 
+        "zone":22,
+        "str":123,
+        "country":"Albahrain",
+        "house_num":12,
+        "city":"Almanama",
+        "customerIDFK":2
+ 
+     },
+     {
+        "addresID":3, 
+        "zone":8,
+        "str":91,
+        "country":"Kuwait",
+        "house_num":30,
+        "city":"Doha",
+        "customerIDFK":3
+ 
+     }
+]

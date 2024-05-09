@@ -1,0 +1,24 @@
+
+[
+    {
+      "manufacturerID": 1,
+      "manufacturer_name": "BMW"
+    },
+    {
+      "manufacturerID": 2,
+      "manufacturer_name": "KIA"
+    },
+    {
+      "manufacturerID": 3,
+      "manufacturer_name": "LEXUIS"
+    },
+    {
+      "manufacturerID": 4,
+      "manufacturer_name": "GMS"
+    },
+    {
+      "manufacturerID": 5,
+      "manufacturer_name": "HONDAY"
+    }
+  ]
+  

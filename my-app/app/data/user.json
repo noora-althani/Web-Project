@@ -1,0 +1,44 @@
+[
+{
+    "userID":1,
+    "username":"User1",
+    "password":"User1",
+    "type":"Admin"
+},
+{
+    "userID":2,
+    "username":"User2",
+    "password":"User2",
+    "type":"Admin"
+},
+{
+    "userID":3,
+    "username":"User3",
+    "password":"User3",
+    "type":"customer"
+},
+{
+    "userID":4,
+    "username":"User4",
+    "password":"User4",
+    "type":"customer"
+},
+{
+    "userID":5,
+    "username":"User5",
+    "password":"User5",
+    "type":"customer"
+},{
+    "userID":6,
+    "username":"User6",
+    "password":"User6",
+    "type":"seller"
+},
+{
+    "userID":7,
+    "username":"User7",
+    "password":"User7",
+    "type":"seller"
+}
+
+]

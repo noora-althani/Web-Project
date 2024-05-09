@@ -1,0 +1,32 @@
+[
+  {
+    "carID": 1,
+    "model_name": "BMW",
+    "year": "2011-12-12T00:00:00Z",
+    "price": 200000,
+    "stock": 5,
+    "image": "hi",
+    "manufacturerIDFK": 1,
+    "sellerIDFK": 1
+  },
+  {
+    "carID": 2,
+    "model_name": "Landcroser",
+    "year": "2011-12-12T00:00:00Z",
+    "price": 1000000,
+    "stock": 6,
+    "image": "hi",
+    "manufacturerIDFK": 2,
+    "sellerIDFK": 2
+  },
+  {
+    "carID": 3,
+    "model_name": "Landcroser",
+    "year": "2011-12-12T00:00:00Z",
+    "price": 1000000,
+    "stock": 2,
+    "image": "hi",
+    "manufacturerIDFK": 3,
+    "sellerIDFK": 3
+  }
+]

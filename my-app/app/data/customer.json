@@ -2,7 +2,7 @@
   {
     "customerID": 1,
     "first_name": "Noor",
-    "last_name": "Khalifa"
+    "last_name": "Hassan"
   },
   {
     "customerID": 2,
@@ -16,12 +16,36 @@
   },
   {
     "customerID": 4,
-    "first_name": "Haya",
+    "first_name": "Noof",
     "last_name": "Rashid"
   },
   {
     "customerID": 5,
-    "first_name": "Noor",
-    "last_name": "Ahmad"
+    "first_name": "Ghadah",
+    "last_name": "Khalifa"
+  }, {
+    "customerID": 6,
+    "first_name": "Nooh",
+    "last_name": "Mohammad"
+  },
+  {
+    "customerID": 7,
+    "first_name": "Delila",
+    "last_name": "Adam"
+  },
+  {
+    "customerID": 8,
+    "first_name": "Nayla",
+    "last_name": "Khalifa"
+  },
+  {
+    "customerID": 9,
+    "first_name": "Aisha",
+    "last_name": "Tamim"
+  },
+  {
+    "customerID": 10,
+    "first_name": "Hamad",
+    "last_name": "Aziz"
   }
 ]

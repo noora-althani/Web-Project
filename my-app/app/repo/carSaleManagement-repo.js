@@ -114,7 +114,16 @@ class CarSaleManagmentRepo {
       return { error: error.message };
     }
   }
-
+async getCarsByName(model){
+  return await prisma.car.findMany({
+    where: {
+      model_name: {
+        contains: model.toLowerCase(),
+      },
+    },
+  });
+}
+async 
   //---------------------------------PART B--------------------------------
 
   //(1) The total amount of purchases (for all buyers) per product and per year,

@@ -77,6 +77,13 @@
   width: var(--max-width);
 }
 
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; 
+}
+
+
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);

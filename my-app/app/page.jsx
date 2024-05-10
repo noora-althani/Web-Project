@@ -1,0 +1,44 @@
+import Image from "next/image";
+import styles from "./page.module.css";
+import carSaleManagementRepo from "@/app/repo/carSaleManagement-repo";
+
+import CustomerOrder from "@/app/orders/CustomerOrder";
+import TopCars from "@/app/cars/TopCars";
+import CarNoPurchase from "@/app/cars/CarNoPurchase";
+
+export default async function YourComponent() {
+  let custOrderSum =
+    await carSaleManagementRepo.getTotalOrdersPerCustomerWithSum();
+  let topCars = await carSaleManagementRepo.getTopProductsAllTime();
+  let carsNotPurchased =
+    await carSaleManagementRepo.getProductTypesNeverPurchased();
+
+  let cars = await carSaleManagementRepo.getCars();
+
+  console.log(custOrderSum);
+
+  return (
+    <>
+      <h2>Statistics:</h2>
+      {/* statistics compontnts */}
+      <CustomerOrder customersOrders={custOrderSum}></CustomerOrder>
+      <TopCars topCars={topCars}></TopCars>
+      <CarNoPurchase carsNotPurchased={carsNotPurchased}></CarNoPurchase>
+
+
+      {/*remove this if needed*/}
+      <h2 style={{ textAlign: 'center' }}>Listing Cars In System</h2>
+      <main className={styles.grid}>
+        
+        {cars.map((car) => (
+          <div key={car.carID} className={styles.card}>
+            <img className={styles.img} src={car.image} alt={car.model_name} />
+            <p>{car.model_name}</p>
+            <p>{new Date(car.year).getFullYear()}</p>
+            <p>{Number(car.price)}</p>
+          </div>
+        ))}
+      </main>
+    </>
+  );
+}

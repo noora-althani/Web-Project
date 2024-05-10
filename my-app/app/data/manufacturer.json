@@ -6,19 +6,38 @@
     },
     {
       "manufacturerID": 2,
-      "manufacturer_name": "KIA"
+      "manufacturer_name": "Daewoo"
     },
     {
       "manufacturerID": 3,
-      "manufacturer_name": "LEXUIS"
+      "manufacturer_name": "Dodge"
     },
     {
       "manufacturerID": 4,
-      "manufacturer_name": "GMS"
+      "manufacturer_name": "Subaru"
     },
     {
       "manufacturerID": 5,
-      "manufacturer_name": "HONDAY"
+      "manufacturer_name": "Jeep"
+    },
+    {
+      "manufacturerID": 6,
+      "manufacturer_name": "Honda"
+    },{
+      "manufacturerID": 7,
+      "manufacturer_name": "Chevrolet"
+    },
+    {
+      "manufacturerID": 8,
+      "manufacturer_name": "Infiniti"
+    },
+    {
+      "manufacturerID": 9,
+      "manufacturer_name": "Lexus"
+    },
+    {
+      "manufacturerID": 10,
+      "manufacturer_name": "Mercedes-Benz"
     }
   ]
   

@@ -1,0 +1,140 @@
+main {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+}
+section:nth-of-type(1) {
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+section:nth-of-type(1) h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 4vw;
+  font-weight: bolder;
+  font-family: "Imbue", serif;
+  height: auto;
+  width: 35%;
+  margin-left: 1.5vw;
+  margin-top: 15vh;
+}
+section:nth-of-type(1) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 10% 70%;
+  object-position: 10% 70%;
+}
+section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section:nth-of-type(2) h1,
+section:nth-of-type(2) form {
+  width: 90%;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+section:nth-of-type(2) h1 {
+  color: #755d5d;
+  margin-bottom: 0;
+}
+section:nth-of-type(2) form .row {
+  display: flex;
+  flex-direction: row;
+}
+section:nth-of-type(2) form .row .column {
+  background-color: #c2b3b3;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  width: 30vw;
+  margin-left: 2vw;
+}
+section:nth-of-type(2) form .row .column label,
+section:nth-of-type(2) form .row .column input[type="text"],
+section:nth-of-type(2) form .row .column select {
+  font-size: 1.2vw;
+  padding: 0.3vw 0.5vw;
+}
+section:nth-of-type(2) form .row .column:nth-of-type(1) {
+  margin-left: unset;
+}
+section:nth-of-type(2) form input[type="submit"] {
+  text-transform: uppercase;
+  font-size: 1.2vw;
+  background-color: #a79191;
+  color: white;
+  width: 10vw;
+  border: 0;
+  outline: unset;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+section:nth-of-type(2) form input[type="submit"]:hover {
+  background-color: #755d5d;
+}
+section:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section:nth-of-type(3) #car_grid {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1vw;
+}
+section:nth-of-type(3) #car_grid .car_card {
+  padding: 0 0 5% 0;
+  background-color: #beadad;
+  box-shadow: 0 0 5px #ebe6e6, 0 0 5px #c9bcbc;
+  border-radius: 5px;
+  min-height: 10vh;
+}
+section:nth-of-type(3) #car_grid .car_card p {
+  margin-bottom: 0;
+  margin-top: 0.5vw;
+  margin-left: 0.5vw;
+  font-size: 1.2vw;
+  box-sizing: border-box;
+}
+section:nth-of-type(3) #car_grid .car_card img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+section:nth-of-type(3) #car_grid .car_card button {
+  background-color: #755d5d;
+  margin-top: 0.5vw;
+  margin-left: 0.5vw;
+  color: white;
+  padding: 0.5vw;
+  box-sizing: border-box;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+/* -----------for mobile view----------------- */
+@media only screen and (max-width: 700px) {
+  section:nth-of-type(3) #car_grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1vw;
+  }
+}

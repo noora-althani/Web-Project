@@ -12,7 +12,7 @@
   {
     "carID": 2,
     "model_name": "X6",
-    "year": "2008-1-1T00:00:00Z",
+    "year": "2008-01-01T00:00:00Z",
     "price": 61957.91,
     "stock": 25,
     "image": "https://img.autoabc.lv/BMW-X6/BMW-X6_2008_Apvidus_151027105415_3.jpg",
@@ -22,7 +22,7 @@
   {
     "carID": 3,
     "model_name": "Viper",
-    "year": "1992-2-2T00:00:00Z",
+    "year": "1992-02-02T00:00:00Z",
     "price": 92316.16,
     "stock": 8,
     "image": "https://global.discourse-cdn.com/forza/original/4X/4/b/1/4b13239471708bfaddbe468dd4e65b41861dc221.jpeg",
@@ -32,7 +32,7 @@
   {
     "carID": 4,
     "model_name": "Grand Caravan",
-    "year": "1999-9-9T00:00:00Z",
+    "year": "1999-09-09T00:00:00Z",
     "price": 60196.51,
     "stock": 25,
     "image": "https://file.kelleybluebookimages.com/kbb/base/house/1999/1999-Dodge-Caravan%20Passenger-RearSide_DTCVNSE982_505x360.jpg",
@@ -52,72 +52,74 @@
   {
     "carID": 6,
     "model_name": "ES",
-    "year": "2007-10-70T00:00:00Z",
+    "year": "2007-10-07T00:00:00Z",
     "price": 25505.73,
     "stock": 10,
     "image": "https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/06q3/267360/2007-lexus-es350-photo-5018-s-original.jpg",
     "manufacturerIDFK": 9,
     "sellerIDFK": 3
-  }, {
+  },
+  {
     "carID": 7,
     "model_name": "SC",
-    "year": "1998-9-80T00:00:00Z",
+    "year": "1998-09-08T00:00:00Z",
     "price": 63865.54,
     "stock": 20,
     "image": "https://mag.lexus.co.uk/wp-content/uploads/sites/3/2021/03/1998-Lexus-SC-400-696x416-1.jpg",
     "manufacturerIDFK": 9,
     "sellerIDFK": 3
-  },{
+  },
+  {
     "carID": 8,
     "model_name": "Patriot",
-    "year": "2010-9-100T00:00:00Z",
+    "year": "2010-09-10T00:00:00Z",
     "price": 10470.09,
     "stock": 10,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRnSs4nwerzdB_m3X8meSFHg0KBeOGtQxs-w&usqp=CAU",
     "manufacturerIDFK": 5,
     "sellerIDFK": 4
-
-  },{
+  },
+  {
     "carID": 9,
     "model_name": "Alcyone SVX",
-    "year": "1994-4-40T00:00:00Z",
+    "year": "1994-04-04T00:00:00Z",
     "price": 10470.09,
     "stock": 10,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRnSs4nwerzdB_m3X8meSFHg0KBeOGtQxs-w&usqp=CAU",
     "manufacturerIDFK": 4,
     "sellerIDFK": 5
-
-  },{
+  },
+  {
     "carID": 10,
     "model_name": "SLK-Class",
-    "year": "2012-12-120T00:00:00Z",
+    "year": "2012-12-12T00:00:00Z",
     "price": 89741.66,
     "stock": 20,
     "image": "https://www.cnet.com/a/img/resize/d7535fd345509e07239e3e5454a1a68a08607e79/hub/2011/11/03/ae09c41c-bb76-11e2-8a8e-0291187978f3/35054558_OVR.JPG?fit=crop&height=675&width=1200",
     "manufacturerIDFK": 10,
     "sellerIDFK": 6
-
-  },{
+  },
+  {
     "carID": 11,
     "model_name": "C-Class",
-    "year": "2008-10-80T00:00:00Z",
+    "year": "2008-10-08T00:00:00Z",
     "price": 67451.53,
     "stock": 20,
     "image": "https://www.vehiclehistory.com/uploads/2008-Mercedes-C-Class.jpg",
     "manufacturerIDFK": 10,
     "sellerIDFK": 6
-
-  },{
+  },
+  {
     "carID": 12,
     "model_name": "M-Class",
-    "year": "2007-7-70T00:00:00Z",
+    "year": "2007-07-07T00:00:00Z",
     "price": 68137.41,
     "stock": 42,
     "image": "https://www.vehiclehistory.com/uploads/2008-Mercedes-C-Class.jpg",
     "manufacturerIDFK": 10,
     "sellerIDFK": 6
-
-  },{
+  },
+  {
     "carID": 13,
     "model_name": "Civic",
     "year": "2003-10-30T00:00:00Z",
@@ -126,46 +128,45 @@
     "image": "https://file.kelleybluebookimages.com/kbb/base/house/2003/2003-Honda-Civic-FrontSide_HOCIVEXSED031_505x375.jpg",
     "manufacturerIDFK": 6,
     "sellerIDFK": 7
-
-  },{
+  },
+  {
     "carID": 14,
     "model_name": "Cobalt",
-    "year": "2007-10-80T00:00:00Z",
+    "year": "2007-10-08T00:00:00Z",
     "price": 31555.94,
     "stock": 10,
     "image": "https://www.cars.com/i/large/in/v2/stock_photos/19c7559b-e2bf-4b45-9cb1-2449083db063/2ff0f7ca-311b-4a56-8799-78233b3c734d.png",
     "manufacturerIDFK": 7,
     "sellerIDFK": 8
-
-  },{
+  },
+  {
     "carID": 15,
     "model_name": "Camaro",
-    "year": "1970-1-100T00:00:00Z",
+    "year": "1970-01-10T00:00:00Z",
     "price": 62340.67,
     "stock": 50,
     "image": "https://images.squarespace-cdn.com/content/v1/5e7918a4b1051f6e49dcfdb1/1634936893306-UU65HTHQH6H9CQW69SQB/DS102110FF.jpg",
     "manufacturerIDFK": 7,
     "sellerIDFK": 8
-
-  },{
+  },
+  {
     "carID": 16,
     "model_name": "Silverado",
-    "year": "1999-6-270T00:00:00Z",
+    "year": "1999-06-27T00:00:00Z",
     "price": 17896.38,
     "stock": 42,
     "image": "https://d1gymyavdvyjgt.cloudfront.net/drive/images/made/drive/images/remote/https_ssl.caranddriving.com/f2/images/used/big/volvov70_750_500_70.jpg",
     "manufacturerIDFK": 7,
     "sellerIDFK": 8
-
-  },{
+  },
+  {
     "carID": 17,
     "model_name": "Q",
-    "year": "2005-5-290T00:00:00Z",
+    "year": "2005-05-29T00:00:00Z",
     "price": 68885.61,
     "stock": 10,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROnk2JHNKtlPHiY4wEI-QI8FcfvIGgQgbfDxT0hqo1Ug&s",
     "manufacturerIDFK": 8,
     "sellerIDFK": 9
-
   }
 ]

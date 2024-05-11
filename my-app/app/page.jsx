@@ -5,28 +5,37 @@ import carSaleManagementRepo from "@/app/repo/carSaleManagement-repo";
 import CustomerOrder from "@/app/orders/CustomerOrder";
 import TopCars from "@/app/cars/TopCars";
 import CarNoPurchase from "@/app/cars/CarNoPurchase";
+import SellerManufacturer from "@/app/sellers/SellerManufacturer";
+import UsersCount from '@/app/users/UsersCount'
+import TopCustomers from "@/app/customers/TopCustomers";
 
 export default async function YourComponent() {
-  let custOrderSum =
-    await carSaleManagementRepo.getTotalOrdersPerCustomerWithSum();
+  let custOrderSum = await carSaleManagementRepo.getTotalOrdersPerCustomerWithSum();
   let topCars = await carSaleManagementRepo.getTopProductsAllTime();
-  let carsNotPurchased =
-    await carSaleManagementRepo.getProductTypesNeverPurchased();
+  let carsNotPurchased = await carSaleManagementRepo.getProductTypesNeverPurchased();
+  let most_manufacturer = await carSaleManagementRepo.getSellersWithMostManufacturer()
+  let topCustomers = await carSaleManagementRepo.customersTop3Orders()
+  let usersType = await carSaleManagementRepo.getUserTypeCounts()
 
   let cars = await carSaleManagementRepo.getCars();
 
   console.log(custOrderSum);
+  
+ 
 
   return (
     <>
-      <h2>Statistics:</h2>
+      <h1 className={styles.center}>Statistics:</h1>
       {/* statistics compontnts */}
       <CustomerOrder customersOrders={custOrderSum}></CustomerOrder>
       <TopCars topCars={topCars}></TopCars>
       <CarNoPurchase carsNotPurchased={carsNotPurchased}></CarNoPurchase>
+      < SellerManufacturer  most_manufacturer={most_manufacturer}></ SellerManufacturer>
+      <TopCustomers topCustomers={topCustomers}></TopCustomers>
+      <UsersCount usersType={usersType}></UsersCount>
 
 
-      {/*remove this if needed*/}
+      {/*not really necessary*/}
       <h2 style={{ textAlign: 'center' }}>Listing Cars In System</h2>
       <main className={styles.grid}>
         

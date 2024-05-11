@@ -40,11 +40,7 @@ export default function CarNoPurchase({carsNotPurchased}) {
           <td>{car.sellerIDFK}</td>
         </tr>
         )}
-        {/* <tr>
-            <td colSpan="8">
-                <h3 className={styles.description}>(3) Cars That Were Not Purchased At All</h3>
-            </td>
-        </tr> */}
+       
       </tbody>
     
     </table>

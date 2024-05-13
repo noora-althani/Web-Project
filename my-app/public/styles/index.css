@@ -6,6 +6,32 @@ main {
   flex-direction: column;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
 section {
   width: 100%;
 }
@@ -138,8 +164,23 @@ section:nth-of-type(3) #car_grid .car_card button {
     gap: 1vw;
   }
 
-  section:nth-of-type(3) #car_grid * {
-    font-size: 16px; 
+  section:nth-of-type(3) #car_grid .car_card p {
+    font-size: 5vw; 
   }
+  
+.car_card .purchase-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%; 
+  height: 20%;
+  border-radius: 5%;
 }
+section:nth-of-type(3) #car_grid .car_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+}
+}

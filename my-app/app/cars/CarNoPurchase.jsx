@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '@/app/page.module.css'
 
 export default function CarNoPurchase({carsNotPurchased}) {
-    console.log(carsNotPurchased)
+    // console.log(carsNotPurchased)
   return (
     <main className={styles.main} >
       
@@ -30,7 +30,7 @@ export default function CarNoPurchase({carsNotPurchased}) {
         <tr>
           <td>{car.carID}</td>
           <td>{car.model_name}</td>
-          <td>{new Date(car.year).getFullYear()}</td>
+          <td>{car.year}</td>
           <td>{Number(car.price)}</td>
           <td>{car.stock}</td>
           <td>

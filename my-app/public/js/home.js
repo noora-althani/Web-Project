@@ -32,11 +32,26 @@ async function loadCarsList() {
         <p>Make: <span class="make">${mnf.manufacturer_name}</span></p>
         <p>Model: <span class="model">${car.model_name}</span></p>
         <p>Price: ${car.price}</p>
-        <button class="purchase-button" onclick="car_details('${car["carID"]}')">Purchase</button>
+        <button class="purchase-button" onclick="openPopup()">Purchase</button>
+        <div class="popup" id="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>You must login first!</p>
+          </div>
+        </div>
       </div>`;
 
     listings.innerHTML += info;
   });
+
+}
+
+function openPopup() {
+    document.getElementById('popup').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
 }
 
 async function getmanufacturName(mnfid) {
@@ -66,13 +81,19 @@ function showcars(carlist) {
       let mnf = await getmanufacturName(car.manufacturerIDFK);
   
       let info = `  
-        <div class="car_card">
-          <img src="${car.image}" alt ="${car.model_name}" loading="lazy">
-          <p>Make: <span class="make">${mnf.manufacturer_name}</span></p>
-          <p>Model: <span class="model">${car.model_name}</span></p>
-          <p>Price: ${car.price}</p>
-          <button class="purchase-button" onclick="car_details('${car["carID"]}')">Purchase</button>
-        </div>`;
+      <div class="car_card">
+        <img src="${car.image}" alt ="${car.model_name}" loading="lazy">
+        <p>Make: <span class="make">${mnf.manufacturer_name}</span></p>
+        <p>Model: <span class="model">${car.model_name}</span></p>
+        <p>Price: ${car.price}</p>
+        <button class="purchase-button" onclick="openPopup()">Purchase</button>
+        <div class="popup" id="popup">
+          <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>You must login first!</p>
+          </div>
+        </div>
+      </div>`;
   
       listings.innerHTML += info;
     });

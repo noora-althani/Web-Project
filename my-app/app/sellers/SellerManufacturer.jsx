@@ -2,7 +2,7 @@ import { React } from 'react'
 import styles from '@/app/page.module.css'
 
 export default function SellerManufacturer({ most_manufacturer }){
-    console.log(most_manufacturer)
+    // console.log(most_manufacturer)
     return (
     <main className={styles.main} >
       

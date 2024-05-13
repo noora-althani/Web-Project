@@ -1,37 +1,55 @@
 [
   {
     "sellerID": 1,
-    "seller_name": "Noor"
+    "seller_name": "Noor",
+    "username": "user11",
+    "password": "pass11"
   },
   {
     "sellerID": 2,
-    "seller_name": "Maryam"
+    "seller_name": "Maryam",
+    "username": "user12",
+    "password": "pass12"
   },
   {
     "sellerID": 3,
-    "seller_name": "Noora"
+    "seller_name": "Noora",
+    "username": "user13",
+    "password": "pass13"
   },
   {
     "sellerID": 4,
-    "seller_name": "Ahmad"
+    "seller_name": "Ahmad",
+    "username": "user14",
+    "password": "pass14"
   },
   {
     "sellerID": 5,
-    "seller_name": "Ali"
+    "seller_name": "Ali",
+    "username": "user15",
+    "password": "pass15"
   },  {
     "sellerID": 6,
-    "seller_name": "Khalifa"
+    "seller_name": "Khalifa",
+    "username": "user16",
+    "password": "pass16"
   },  {
     "sellerID": 7,
-    "seller_name": "Ghada"
+    "seller_name": "Ghada",
+    "username": "user17",
+    "password": "pass17"
   },{
     
       "sellerID": 8,
-      "seller_name": "Aziz"
+      "seller_name": "Aziz",
+      "username": "user18",
+      "password": "pass18"
     
   },
   {
     "sellerID": 9,
-    "seller_name": "Samer"
+    "seller_name": "Samer",
+    "username": "user19",
+    "password": "pass19"
   }
 ]

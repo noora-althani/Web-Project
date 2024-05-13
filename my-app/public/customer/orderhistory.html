@@ -31,39 +31,28 @@
     </header>
     <main>
       <section>
-        <h1 id="pageheading"></h1>
+
+        <style> h5 { padding-left: 20px;  }</style>
+        
+        <h1>My Purchases</h1>
+        <h5 id="item_counter">Total Orders:</h5>
+        <h5 id="seller_name">My Name:</h5>
+
         <table id="order_data">
           <tr>
             <th>Order No</th>
-                <th>Quantity</th>
-            <th>User Id</th>
+            <th>Quantity</th>
+            <th>Car Id</th>
+            <th>Model</th>
+            <th>Year </th>
+            <th>Price</th>
 
           </tr>
         </table>
       </section>
     </main>
-    <script src="../js/sellerhistory.js"></script>
+    <script src="../js/customerpurchases.js"></script>
     <script>
-     /* function showOrders(userOrders) {
-        let ele = document.getElementById("order_data");
-
-        userOrders.forEach((user_order) => {
-          let car_data = getCarData(user_order["car_id"]);
-          console.log(car_data);
-
-          ele.innerHTML += `
-          <tr>
-            <td>${user_order["order_id"]}</td>
-            <td>${car_data["model"]}</td>
-            <td>${car_data["make"]}</td>
-            <td>${car_data["price"]}</td>
-            <td>${user_order["quantity"]}</td>
-            <td>$${user_order["total_cost"]}</td>
-            <td>${user_order["user_id"]}</td>
-
-          </tr>
-        `;
-        });}*/
 
       function getCarData(car_id) {
         let car_list = JSON.parse(localStorage.getItem("cars_store"));

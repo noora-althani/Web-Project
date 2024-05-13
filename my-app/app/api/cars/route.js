@@ -14,7 +14,7 @@ export async function GET(request) {
   return Response.json(cars, { status: 200 });
 }
 
-export async function POST(request) {
+export async function POST(request) { //addds new car to db
   const car = await request.json();
   const newCars = await carSaleManagementRepo.addCar(car);
   return Response.json(newCars, { status: 200 });

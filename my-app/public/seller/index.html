@@ -19,17 +19,20 @@
     <header class="header">
       <nav id="logo">
         <a href="#">
-          <img src="../images/logo.png" alt="" />
+          <img src="/images/logo.png" alt="" />
         </a>
       </nav>
       <nav id="top-nav">
-        <a href="../index.html">
-          <span>Home</span>
+        <a href="../">
+          <span>Statistics</span>
+        </a>
+        <a href="orderhistory.html">
+          <span>Orders History</span>
         </a>
       </nav>
       <nav>
         <div id="user_profile">
-          <a href="../login.html"> Login </a>
+          <a href="../login.html"> Logout </a>
         </div>
       </nav>
     </header>
@@ -37,6 +40,7 @@
     <!--All Seller Fucntionaly is done in this page-->
     <h1>Seller Page</h1>
     <h5 id="item_counter">Total Items:</h5>
+    <h5 id="seller_name">Seller Name:</h5>
     <main class="main-section">
       <div class="sell_container">
         <h2>Sell a Car:</h2>
@@ -84,7 +88,7 @@
         <h2>View Sale Items (History)</h2>
 
         <div class="sale_item_container">
-          <h4>Nothing on Sale.</h4>
+         
           <!-- added items here ll= sellerIdList{car object} -->
           <!-- display sellers list (list name by his id)-->
         </div>
@@ -92,4 +96,5 @@
     </main>
   
   </body>
+  <script src="../js/seller.js"></script>
 </html>

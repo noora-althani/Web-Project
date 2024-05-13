@@ -1,6 +1,8 @@
 const listings = document.querySelector("#car_grid"); //reference to main containre
 const carList = []; // local list
 let searchbtn = document.getElementById("searchbtn");
+
+
 searchbtn.addEventListener("click", (event) => {
   event.preventDefault();
   let model_name = document.getElementById("car_model").value.toLowerCase();

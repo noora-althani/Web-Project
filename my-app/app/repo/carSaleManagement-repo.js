@@ -130,17 +130,49 @@ class CarSaleManagmentRepo {
     }
   }
 
+  async addOrder(order) {
+    try {
+      return prisma.order.create({ data: order });
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  async updateCar(carID, updatedCar) {
+    let parsedID = parseInt(carID);
+    return prisma.car.update({
+      data: updatedCar,
+      where: {
+        carID: parsedID,
+      },
+    });
+  }
+  catch(error) {
+    return { error: error.message };
+  }
+
   async getCarsByCustomerId(custId) {
+    let parsedID = parseInt(custId);
     const cars = await prisma.car.findMany({
       where: {
         orders: {
           some: {
-            customerIDFK: custId,
+            customerIDFK: parsedID,
           },
         },
       },
       include: {
         orders: true,
+      },
+    });
+    return cars;
+  }
+
+  async getCarsBySellerId(sId) {
+    let parsedID = parseInt(sId);
+    const cars = await prisma.car.findMany({
+      where: {
+        sellerIDFK: parsedID,
       },
     });
     return cars;
@@ -275,86 +307,147 @@ class CarSaleManagmentRepo {
     return result;
   }
 
-  //(5) gets top 3 customers with most orderes and customer country 
-  async  customersTop3Orders() {
+  //(5) gets top 3 customers with most orderes and customer country
+  async customersTop3Orders() {
     try {
       const topCustomers = await prisma.customer.findMany({
         include: {
           cstorder: true,
           shaddres: {
             select: {
-              country: true
-            }
-          }
+              country: true,
+            },
+          },
         },
         orderBy: {
           cstorder: {
-            _count: 'desc'
-          }
+            _count: "desc",
+          },
         },
-        take: 3
+        take: 3,
       });
-  
-      const formattedResult = topCustomers.map(customer => {
+
+      const formattedResult = topCustomers.map((customer) => {
         const { customerID, first_name, last_name, shaddres } = customer;
-        const orderCount = customer.cstorder.length; 
-        const country = shaddres[0].country; 
+        const orderCount = customer.cstorder.length;
+        const country = shaddres[0].country;
         return {
           customerID,
           first_name,
           last_name,
           orderCount,
-          country
+          country,
         };
       });
       return formattedResult;
     } catch (error) {
-      console.error('Error fetching top customers:', error.message);
+      console.error("Error fetching top customers:", error.message);
       return { error: error.message };
     }
   }
-  
-  
-  
-
 
   //(6)counts how many admins, sellers, customers in the system
-  async  getUserTypeCounts() {
+  async getUserTypeCounts() {
     try {
       const userTypeCounts = await prisma.user.groupBy({
-        by: ['type'],
+        by: ["type"],
         _count: true,
       });
 
       let adminCount = 0;
       let customerCount = 0;
       let sellerCount = 0;
-      userTypeCounts.forEach(userTypeCount => {
+      userTypeCounts.forEach((userTypeCount) => {
         const { type, _count } = userTypeCount;
-        if (type === 'Admin') {
+        if (type === "Admin") {
           adminCount = _count;
-        } else if (type === 'customer') {
+        } else if (type === "customer") {
           customerCount = _count;
-        } else if (type === 'seller') {
+        } else if (type === "seller") {
           sellerCount = _count;
         }
       });
-  
+
       return {
         Admins: adminCount,
         Customers: customerCount,
         Sellers: sellerCount,
       };
     } catch (error) {
-      console.error('Error fetching user type counts:', error.message);
+      console.error("Error fetching user type counts:", error.message);
       return { error: error.message };
     }
   }
-  
 
   //------------------------------------------------------------------------
 
   //tables with relations
+  async getContactInfos() {
+    try {
+      return prisma.contact_info.findMany();
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+  async getContactInfoByCustomerId(custId) {
+    let parsedID = parseInt(custId);
+    const contanct = await prisma.contact_info.findMany({
+      where: {
+        customerIDFk: parsedID,
+      },
+    });
+    return contanct;
+  }
+
+  async getAddresses() {
+    try {
+      return prisma.shipping_addres.findMany();
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  async getAddressByCustId(custId) {
+    let parsedID = parseInt(custId);
+    const contanct = await prisma.shipping_addres.findMany({
+      where: {
+        customerIDFK: parsedID,
+      },
+    });
+    return contanct;
+  }
+
+  async getBankAccounts() {
+    try {
+      return prisma.bank_account.findMany();
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  async getBankAccountByCustId(custId) {
+    let parsedID = parseInt(custId);
+    const contanct = await prisma.bank_account.findMany({
+      where: {
+        customerIDFK: parsedID,
+      },
+    });
+    return contanct;
+  }
+
+  async updateBankAccount(accountNo, updatedAccount) {
+    let parsedID = parseInt(accountNo)
+    try {
+      return prisma.bank_account.update({
+        data: updatedAccount,
+        where: {
+          accountID: parsedID,
+        },
+      });
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
 
   //Customer Relations
   //get customers and their contant info

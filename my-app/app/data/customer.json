@@ -2,50 +2,71 @@
   {
     "customerID": 1,
     "first_name": "Noor",
-    "last_name": "Hassan"
+    "last_name": "Hassan",
+    "username": "user1",
+    "password": "pass1"
   },
   {
     "customerID": 2,
     "first_name": "Noora",
-    "last_name": "Khalid"
+    "last_name": "Khalid",
+    "username": "user2",
+    "password": "pass2"
   },
   {
     "customerID": 3,
     "first_name": "Ali",
-    "last_name": "Nasser"
+    "last_name": "Nasser",
+    "username": "user3",
+    "password": "pass3"
   },
   {
     "customerID": 4,
     "first_name": "Noof",
-    "last_name": "Rashid"
+    "last_name": "Rashid",
+    "username": "user4",
+    "password": "pass4"
   },
   {
     "customerID": 5,
     "first_name": "Ghadah",
-    "last_name": "Khalifa"
-  }, {
+    "last_name": "Khalifa",
+    "username": "user5",
+    "password": "pass5"
+  },
+  {
     "customerID": 6,
     "first_name": "Nooh",
-    "last_name": "Mohammad"
+    "last_name": "Mohammad",
+    "username": "user6",
+    "password": "pass6"
   },
   {
     "customerID": 7,
     "first_name": "Delila",
-    "last_name": "Adam"
+    "last_name": "Adam",
+    "username": "user7",
+    "password": "pass7"
   },
   {
     "customerID": 8,
     "first_name": "Nayla",
-    "last_name": "Khalifa"
+    "last_name": "Khalifa",
+    "username": "user8",
+    "password": "pass8"
   },
   {
     "customerID": 9,
     "first_name": "Aisha",
-    "last_name": "Tamim"
+    "last_name": "Tamim",
+    "username": "user9",
+    "password": "pass9"
   },
   {
     "customerID": 10,
     "first_name": "Hamad",
-    "last_name": "Aziz"
+    "last_name": "Aziz",
+    "username": "user10",
+    "password": "pass10"
   }
 ]

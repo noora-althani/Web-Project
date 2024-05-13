@@ -1,134 +1,259 @@
 let carList = []; // local list
 let car = {};
-let car_index
+let car_index;
 document.addEventListener("DOMContentLoaded", async () => {
   //completed
   var carId = window.location.href.split("=")[1];
+  // console.log("car id is: ")
+  // console.log(carId)
 
   if (carId != null || carId != "") {
-    carList = JSON.parse(localStorage.getItem("cars_store"));
-    let carIndex = carList.findIndex((car) => car["id"] == carId);
-    if (carIndex != -1) {
-      console.log(carIndex);
-      car_index = carIndex;
-      fillCarData(carList[carIndex]);
-      car = carList[carIndex]
-      console.log(car)
-    } else {
-      console.log("No car data");
+    // get car object from db
+    const response2 = await fetch(`/api/cars/${carId}`); //add the seller id. to get specific seller info
+    if (!response2.ok) {
+      throw new Error("Failed to fetch data");
     }
+    const data2 = await response2.json();
+
+    console.log(`Fetched Data of car with id: ${carId}`);
+    console.log(data2); //got cars data success
+
+    fillCarData(data2)
   } else {
     //showCars();
   }
 
-
   let buybtn = document.getElementById("buybtn");
 
-  buybtn.addEventListener("click", (event) => {
+  
+  buybtn.addEventListener("click", async (event) => {
     event.preventDefault();
-    //get placements
-    let orderHistory = localStorage.getItem("orderHistory");
-    let user_info = JSON.parse(localStorage.getItem("userinfo"));
-    let quantity = parseInt(document.getElementById("car_quantity").value);
-    let car_price = document.getElementById("model_price").value;
-    let price_numaric = parseFloat(car_price.slice(1)); // remove first (there is $ in the beginnign)
 
-    let total_cost = quantity * price_numaric; //to get the total 
-    
+    if (confirm("Are you Sure You Want To Purchase The Vehicle.") == true) {
    
-    let user_response = localStorage.getItem("userinfo");
-    let user_data = JSON.parse(user_response);
-    let user_id = user_data[0]["user_id"];
+    //(1) retrieve car data
+    //(2) retrieve cusomter data
+    //(3) retrieve customer bank data
 
 
-    //cars local storage (to -quantity)
-    const lsCars = JSON.parse(localStorage.getItem("6"));
-    let quantityInStorageOfSeller= 0;
-    let index_6;
-    lsCars.forEach(element => {
-        if(element.id == car.id){ //seller id == item id
-          quantityInStorageOfSeller = element.quantity
-        }
-    });
-
-    index_6 =  lsCars.findIndex((car) => car["id"] == carId);
-    console.log("at 6 the index: "+index_6)
-
-    car_store = JSON.parse(localStorage.getItem("cars_store"));
-
-  if(quantity > quantityInStorageOfSeller){ //if qunatity ordered is larger than quantity in storage 
-    alert("Storage Quantity Not Enough")
-  }else{
-  //if quantity is enough
-    if(user_data[0]['balance'] >= total_cost){
-    //console.log(car_price);
-
-
-    //create order object 
-    let orderData = {
-      car_id: carId,
-      user_id: parseInt(user_info[0]["user_id"]), //get it from user info ls
-      quantity: document.getElementById("car_quantity").value, 
-      total_cost: total_cost,
-    };
-
-    if (orderHistory == null) {// nothing in order history (start conting from 1)
-      orderHistory = []; 
-      orderData["order_id"] = 1;
-      orderHistory.push(orderData);
-    } else {// order history has items (add to the last order id)
-      orderHistory = JSON.parse(localStorage.getItem("orderHistory"));
-      console.log(orderHistory.length);
-      orderData["order_id"] = orderHistory.length + 1;
-
-      orderHistory.push(orderData);
+    //(1)
+    const response2 = await fetch(`/api/cars/${carId}`); //add the seller id. to get specific seller info
+    if (!response2.ok) {
+      throw new Error("Failed to fetch data");
     }
+    const data2 = await response2.json();
+    console.log(data2) //car data
+    let car_Id = data2["carID"]
 
-    //decrease amount
-    user_data[0]['balance'] = user_data[0]['balance'] - total_cost; //remove from user balance
-    localStorage.setItem("userinfo", JSON.stringify(user_data))
+    console.log(`car id is: ${car_Id}`)
 
-    //decrease quantity in two places ()
-    lsCars[index_6].quantity = lsCars[index_6].quantity - quantity
-    car_store[car_index].quantity = car_store[car_index].quantity - quantity
-    localStorage.setItem("6", JSON.stringify(lsCars))
-    localStorage.setItem("cars_store", JSON.stringify(car_store))
+    //(2) 
+    let customer_data = JSON.parse(localStorage.getItem("coustomerInfo"));
+    console.log(customer_data[0]) //customer data
+    let customerId = customer_data[0]["customerID"]
 
+    console.log(`customer id is: ${customerId}`)
 
-    alert("Item is Added Successfully")
-    localStorage.setItem("orderHistory", JSON.stringify(orderHistory));//set ls
-}else{
-  //not enough 
-  alert(`Balance Not Enough Please Choose less quantity or another item. Your Balance is ${user_data[0]['balance']}`)
-}
-}
+    //(3)
+    const response3 = await fetch(`/api/bankaccounts/${customer_data[0]["customerID"]}`); //add the seller id. to get specific seller info
+    if (!response3.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    const data3 = await response3.json();
+    console.log(data3[0]) 
+    
+    //[1] check account_balance and total price {false} show alert
+    //[1.5] check car stock quantity and customer order quantity
+    //[2] {true} deduct balance from account - UPDATE REPO API
+    //[3] {true} reduce stock quantity from car - UPDATE REPO API
+    //[4] {true} create order object
+
+    //get values of quantity and price + get total
+    let quantity = parseInt(document.getElementById("car_quantity").value);
+    let price_string = document.getElementById("model_price").value;
+    let price = parseFloat(price_string)
+
+    console.log(`values from input quantity ${quantity}`)
+    console.log(`values from input price ${price}`)
+
+    let total_cost = quantity * price; //correct
+
+    console.log(`values from input total price: ${total_cost}`)
+
+  
+    console.log(`car stock: ${data2["stock"]}`)
+    //[1] [1.5]
+    if(quantity <= data2["stock"] && total_cost <= data3[0]["account_balance"]){
+      console.log("quantity and balance enough")
+
+      //[2] - deduct from balance
+      let newBallance = data3[0]["account_balance"] - total_cost
+
+      //first get the whole account obj
+      let accountObj = data3[0]
+
+      updatedBalance = {
+        accountID: accountObj.accountID,
+        account_balance: newBallance.toString(),
+        customerIDFK: accountObj.customerIDFK,
+        iban: accountObj.iban
+      }
+
+      await handleUpdateAccountBalance(data3[0]["accountID"], updatedBalance)
+
+      console.log("handel update balance")
+      
+
+      //[3] - reduce car stock
+      let newStock = data2["stock"] - quantity
+   
+      let updatedCar = {
+        carID: data2.carID,
+        image: data2.image,
+        manufacturerIDFK: data2.manufacturerIDFK,
+        model_name: data2.model_name,
+        price: data2.price,
+        sellerIDFK: data2.sellerIDFK,
+        stock: newStock,
+        year: data2.year
+      }
+
+      await handleUpdateCarStock(car_Id, updatedCar)
+      console.log("handel update stock")
+
+      let newOrder = {
+        order_num: 2,
+        quantity:  quantity,
+        carIDFK: car_Id,
+        customerIDFK: customerId
+      }
+      createOrder(newOrder)
+      console.log("handel create order")
+
+      alert("Purchase Success.")
+
+      window.location.href = "/customer/index.html";
+    }else{
+      console.log("quantity or balance not enough")
+      alert(`Oops! Quantity or Balance Not Enough. You Have: ${data3[0]["account_balance"]}QAR and Car Stock Quantity is: ${data2["stock"]} `)
+    }
+  }else{
+    alert("Purchase Canceled. ")
+  }
+
 
   });
 });
 
+async function handleUpdateCarStock(accountNo, updatedStock) {
+  try {
+      const url = `/api/cars/${accountNo}`;
+      
+      const response = await fetch(url, {
+          method: "PUT",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedStock),
+      });
+      if (!response.ok) {
+          throw new Error("Failed to update account car stock");
+      }
+      const updatedCar = await response.json();
+      console.log("Car stock updated successfully:", updatedCar);
+    
+  } catch (error) {
+      console.error("Error updating car stock:", error);
+  }
+}
+
+
+async function handleUpdateAccountBalance(accountNo, updatedBalance) {
+    try {
+        const url = `/api/bankaccounts/${accountNo}`;
+        
+        const response = await fetch(url, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedBalance),
+        });
+        if (!response.ok) {
+            throw new Error("Failed to update account balance");
+        }
+        const updatedAccount = await response.json();
+        console.log("Account balance updated successfully:", updatedAccount);
+      
+    } catch (error) {
+        console.error("Error updating account balance:", error);
+    }
+}
+
+
+async function createOrder(newOrder) {
+  try {
+      const response = await fetch("/api/orders", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(newOrder)
+      });
+      if (!response.ok) {
+          throw new Error("Failed to create order");
+      }
+      const createdOrder = await response.json();
+      return createdOrder;
+  } catch (error) {
+      console.error("Error creating order:", error);
+      throw error;
+  }
+}
+
+
 //just to fill the form with data from the local store
-function fillCarData(car) {
-  let user_info = JSON.parse(localStorage.getItem("userinfo"));
-  document.getElementById("car_id").value = car["id"];
-  document.getElementById("model_name").value = car["model"];
+async function fillCarData(car) {
+  let user_info = JSON.parse(localStorage.getItem("coustomerInfo"));
+
+  document.getElementById("car_id").value = car["carID"];
+  document.getElementById("model_name").value = car["model_name"];
   document.getElementById("car_quantity").value = 1;
   document.getElementById("model_price").value = car["price"];
-  let price_numaric = car["price"].slice(1);
+  // let price_numaric = car["price"].slice(1);
   //console.log(price_numaric);
-  let total_cost = parseInt(1) * parseFloat(price_numaric);
+  console.log("price tuyp")
+  console.log(typeof car["price"])
+
+
+  let total_cost = parseInt(1) * parseFloat(car["price"]);
   document.getElementById("total-price").value = total_cost;
-  //console.log(user_info);
+  
+  console.log("The cusotmer id is ")
+  console.log(user_info[0]["customerID"]);//from this id get addresses
+let userId = user_info[0]["customerID"]
+
+//get user shipping info
+console.log(`/api/addresses/${userId}`)
+const response2 = await fetch(`/api/addresses/${userId}`); 
+if (!response2.ok) {
+  throw new Error("Failed to fetch data");
+}
+const data2 = await response2.json();
+// console.log("users shipping address")
+// console.log(data2[0])
+
+let shippingInfo = data2[0]
+  
 
   //assign inputs
-  document.getElementById("country").value =
-    user_info[0]["shippingaddress"]["counrty"];
+  document.getElementById("country").value = shippingInfo["country"]
 
-  document.getElementById("city").value =
-    user_info[0]["shippingaddress"]["city"];
+  document.getElementById("city").value = shippingInfo["city"]
 
-  document.getElementById("zone").value =
-    user_info[0]["shippingaddress"]["zone"];
+  document.getElementById("zone").value = shippingInfo["zone"]
 
-  document.getElementById("shipping-address").value =
-    user_info[0]["shippingaddress"]["str name"];
+  document.getElementById("shipping-address").value = shippingInfo["house_num"]
 }
+
+

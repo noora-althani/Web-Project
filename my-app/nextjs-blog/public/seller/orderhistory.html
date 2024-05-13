@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Item</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/coustomer_orders.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav id="logo">
+        <a href="#">
+          <img src="/images/logo.png" alt="" />
+        </a>
+      </nav>
+      <nav id="top-nav">
+        <a href="index.html">
+          <span>Home</span>
+        </a>
+      </nav>
+      <nav>
+        <div id="user_profile">
+          <a href="../index.html"> Logout </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 id="pageheading"></h1>
+        <table id="order_data">
+          <tr>
+            <th>Order No</th>
+                <th>Quantity</th>
+            <th>User Id</th>
+
+          </tr>
+        </table>
+      </section>
+    </main>
+    <script src="../js/sellerhistory.js"></script>
+    <script>
+     /* function showOrders(userOrders) {
+        let ele = document.getElementById("order_data");
+
+        userOrders.forEach((user_order) => {
+          let car_data = getCarData(user_order["car_id"]);
+          console.log(car_data);
+
+          ele.innerHTML += `
+          <tr>
+            <td>${user_order["order_id"]}</td>
+            <td>${car_data["model"]}</td>
+            <td>${car_data["make"]}</td>
+            <td>${car_data["price"]}</td>
+            <td>${user_order["quantity"]}</td>
+            <td>$${user_order["total_cost"]}</td>
+            <td>${user_order["user_id"]}</td>
+
+          </tr>
+        `;
+        });}*/
+
+      function getCarData(car_id) {
+        let car_list = JSON.parse(localStorage.getItem("cars_store"));
+        let car_data = car_list.filter((car) => car["id"] == car_id);
+        return car_data[0];
+      }
+    </script>
+
+   
+  </body>
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+       "accountID":1,
+        "account_balance":2345.6,
+        "iban":"QAB00200202",
+"customerIDFK":1
+    },
+    {
+        "accountID":2,
+         "account_balance":10000,
+         "iban":"QIB99932001",
+ "customerIDFK":2
+     },
+     {
+        "accountID":3,
+         "account_balance":4672.9,
+         "iban":"DKN0221892",
+ "customerIDFK":3
+     },
+     {
+        "accountID":4,
+         "account_balance":66666,
+         "iban":"QNB33301127",
+ "customerIDFK":4
+     },
+     {
+        "accountID":5,
+         "account_balance":1233,
+         "iban":"QIB333301127",
+ "customerIDFK":5
+     }
+]

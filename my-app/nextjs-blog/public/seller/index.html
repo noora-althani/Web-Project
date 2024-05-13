@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/nav.css" />
+
+    <link rel="stylesheet" href="../styles/seller_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav id="logo">
+        <a href="#">
+          <img src="/images/logo.png" alt="" />
+        </a>
+      </nav>
+      <nav id="top-nav">
+        <a href="../">
+          <span>Statistics</span>
+        </a>
+        <a href="orderhistory.html">
+          <span>Orders History</span>
+        </a>
+      </nav>
+      <nav>
+        <div id="user_profile">
+          <a href="../login.html"> Logout </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--All Seller Fucntionaly is done in this page-->
+    <h1>Seller Page</h1>
+    <h5 id="item_counter">Total Items:</h5>
+    <h5 id="seller_name">Seller Name:</h5>
+    <main class="main-section">
+      <div class="sell_container">
+        <h2>Sell a Car:</h2>
+
+        <form id="add_car_form">
+          <div class="grid-container">
+            <label for="price">Price:</label>
+            <input type="text" id="price" placeholder="Enter Price" required />
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              placeholder="Enter Quantity"
+              required
+            />
+            <label for="models">Model:</label
+            ><input
+              type="text"
+              id="model"
+              placeholder="Enter Vehicle Model"
+              required
+            />
+            <!-- <select name="model" id="models" class="models">
+              
+            </select> -->
+            <label for="makes">Make:</label>
+            <select name="make" id="makes" class="makes">
+              <!-- Inject makes here -->
+            </select>
+            <label for="year">Year:</label>
+            <input type="number" id="year" placeholder="Enter Year" required />
+            <label for="image">Image:</label>
+            <input
+              type="text"
+              id="image"
+              placeholder="Enter Image URL"
+              required
+            />
+            <input type="submit" value="Add Vehicle" id="add" />
+          </div>
+        </form>
+      </div>
+
+      <div class="show_history">
+        <h2>View Sale Items (History)</h2>
+
+        <div class="sale_item_container">
+         
+          <!-- added items here ll= sellerIdList{car object} -->
+          <!-- display sellers list (list name by his id)-->
+        </div>
+      </div>
+    </main>
+  
+  </body>
+  <script src="../js/seller.js"></script>
+</html>
